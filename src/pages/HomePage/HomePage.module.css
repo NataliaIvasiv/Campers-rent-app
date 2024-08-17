@@ -1,0 +1,18 @@
+.HomePageContainer {
+  background-color: #f7f7f7;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: 0;
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+}
+.link {
+  text-decoration: none;
+}
+.link:hover {
+  text-transform: uppercase;
+}

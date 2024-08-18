@@ -12,12 +12,10 @@ const CamperList = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log('Fetching campers...');
     dispatch(fetchCampers());
   }, [dispatch]);
 
   const campers = useSelector(selectCampers);
-  console.log(campers);
 
   if (!campers || campers.length === 0) {
     return <p>No campers available</p>;
@@ -26,13 +24,13 @@ const CamperList = () => {
   return (
     <ul className={css.camperList}>
       {campers.map(camper => (
-        <li className={css.camperItem} key={camper.id}>
+        <li className={css.camperItem} key={camper._id}>
           <CamperItem
-            id={camper.id}
+            id={camper._id}
             name={camper.name}
             price={camper.price}
             rating={camper.rating}
-            location={camper.location}
+            //location={camper.location}
             adults={camper.adults}
             engine={camper.engine}
             transmission={camper.transmission}

@@ -4,15 +4,16 @@ import { useSelector } from 'react-redux';
 import CamperItem from '../../components/CamperItem/CamperItem';
 
 const Favourites = () => {
-  const favorites = useSelector(selectFavorites);
+  const favourites = useSelector(selectFavorites);
+  console.log(favourites);
 
   return (
     <div className={css.favouriteCont}>
       <h1 className={css.favouriteTitle}>Favourites</h1>
       <p>Best campers for you!</p>
-      {favorites.length > 0 ? (
+      {favourites.length > 0 ? (
         <ul className={css.favoritesList}>
-          {favorites.map(item => {
+          {favourites.map(item => {
             return <CamperItem key={item._id} data={item} />;
           })}
         </ul>

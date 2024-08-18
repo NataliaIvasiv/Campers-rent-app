@@ -6,10 +6,8 @@ const fetchCampers = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const data = await requestGetCampers();
-      console.log(data);
       return data;
     } catch (error) {
-      console.log('i am error');
       return thunkAPI.rejectWithValue(error.message);
     }
   }

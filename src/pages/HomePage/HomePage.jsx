@@ -1,9 +1,6 @@
 import css from './HomePage.module.css';
 import { NavLink } from 'react-router-dom';
 import clsx from 'clsx';
-import { Route, Routes } from 'react-router-dom';
-import Catalog from '../Catalog/Catalog';
-import Favourites from '../Favourites/Favourites';
 
 const HomePage = () => {
   const buildLinkClass = ({ isActive }) => {
@@ -22,10 +19,6 @@ const HomePage = () => {
           Favourites
         </NavLink>
       </nav>
-      <Routes>
-        <Route path="/catalog" element={<Catalog />} />
-        <Route path="/favourites" element={<Favourites />} />
-      </Routes>
     </div>
   );
 };

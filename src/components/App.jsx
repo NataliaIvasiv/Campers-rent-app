@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/favourites" element={<Favourites />} />
           <Route path="/catalog" element={<Catalog />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Suspense>
     </div>

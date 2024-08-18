@@ -1,0 +1,37 @@
+.inputWrapper {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.locationInput {
+  height: Hug (56px) px;
+  padding: 18px 218px 24px 18px;
+  gap: 10px;
+  border-radius: 10px;
+  opacity: 0px;
+  border: none;
+  background-color: rgba(247, 247, 247, 1);
+}
+
+.inputWrapper::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background: url('/src/assets/symbol-defs.svg#icon-map-pin') no-repeat center
+    center;
+  background-size: contain;
+}
+.locationLabel {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  color: rgba(16, 24, 40, 0.6);
+  margin: 0;
+  margin-bottom: 8px;
+}
